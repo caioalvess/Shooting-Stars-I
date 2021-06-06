@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(baloon.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    transform: rotateZ(45deg);
+}
+
+span {
+    width: 140px;
+    height: .09em;
+    display: block;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), transparent);
+    margin: 50px;
+    margin-bottom: 150px;
+    position: relative;
+    animation: shooting 1.5s linear infinite;
+    opacity: 0;
+}
+
+span:before {
+    content: "";
+    position: absolute;
+    bottom: -.08em;
+    left: -.09em;
+    width: 4px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px rgb(255, 255, 255);
+    border-radius: 60px;
+}
+
+.star:nth-child(1) {
+    right: 300px;
+    animation-delay: 0;
+    animation-duration:1s;
+}
+
+.star:nth-child(2) span {
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+
+.star:nth-child(3) {
+    right: 500px;
+}
+
+.star:nth-child(3) span {
+    animation-delay: 3s;
+}
+
+.star:nth-child(4) {
+    right: 600px;
+}
+
+.star:nth-child(4) span {
+    animation-delay: 5s;
+}
+
+.star:nth-child(5) {
+    right: 800px;
+}
+
+.star:nth-child(5) span {
+    animation-delay: 7s;
+}
+
+.star:nth-child(6) {
+    right: 700px;
+}
+
+.star:nth-child(6) span {
+    animation-delay: 9s;
+}
+
+.star:nth-child(6) {
+    right: 1000px;
+}
+
+.star:nth-child(6) span {
+    animation-delay: 1.5s;
+}
+
+
+@keyframes shooting {
+    0% {
+        transform: translateY(-200px) rotate(-90deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(490px) rotate(-90deg);
+        opacity: 0;
+    }
+} 
